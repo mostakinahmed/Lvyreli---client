@@ -8,33 +8,41 @@ import {
   User,
   Camera,
   Menu,
-  X
+  X,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function HomeLayout() {
   // State for mobile menu toggle
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <div className="bg-slate-100 font-sans text-slate-800 shadow-xs">
       {/* ================= HEADER NAVIGATION ================= */}
       <header className="md:px-13 bg-white border-b border-slate-200 sticky top-0 z-50">
-        
         {/* Main Header Bar */}
         <div className=" px-4 md:px-0 h-15 md:h-20 flex items-center justify-between gap-4">
-          
           {/* Left: Mobile Menu Button & Logo */}
           <div className="flex items-center gap-3">
-            <button 
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden text-slate-700 hover:text-orange-600 focus:outline-none"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
 
             {/* Logo */}
             <div className="flex  items-center cursor-pointer">
-              <img className="h-9 sm:h-20 object-contain" src="logo f.png" alt="Lvyreli Logo" />
+              <img
+                onClick={() => navigate("/")}
+                className="h-9 sm:h-20 object-contain"
+                src="logo f.png"
+                alt="Lvyreli Logo"
+              />
             </div>
           </div>
 
@@ -126,7 +134,9 @@ export default function HomeLayout() {
               <List className="w-4 h-4 text-orange-500" />
               <span>All categories</span>
             </div>
-            <div className="text-sm text-slate-700 py-1">Verified manufacturers</div>
+            <div className="text-sm text-slate-700 py-1">
+              Verified manufacturers
+            </div>
             <div className="text-sm text-slate-700 py-1">Dropshipping</div>
             <div className="pt-2 border-t border-slate-100 flex flex-col gap-2 text-xs text-slate-500">
               <span className="cursor-pointer">About Lvyreli</span>
@@ -135,7 +145,6 @@ export default function HomeLayout() {
             </div>
           </div>
         )}
-
       </header>
     </div>
   );

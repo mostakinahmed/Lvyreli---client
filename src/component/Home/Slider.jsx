@@ -62,7 +62,7 @@ export default function Hero() {
 
         {/* Floating Decorative Glass Orbs for Atmospheric Depth */}
         <div className="absolute -top-12 -left-12 w-56 h-56 rounded-full bg-rose-500/30 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-12 -right-12 w-64 h-64 rounded-full bg-amber-500/25 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-12 -righ************t-12 w-64 h-64 rounded-full bg-amber-500/25 blur-3xl pointer-events-none" />
 
         {/* Solid Text Container (No backdrop blur behind text for maximum clarity) */}
         <div className="max-w-4xl mx-auto px-6 py-4 md:space-y-4  space-y-2 z-10 relative transition-all duration-500">

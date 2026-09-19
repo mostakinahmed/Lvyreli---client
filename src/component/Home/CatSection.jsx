@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Zap, Heart, ArrowRight, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function CatSection() {
+  const navigate = useNavigate();
+
   // Category sections data
   const categorySections = [
     {
@@ -181,14 +184,21 @@ export default function CatSection() {
               {section.products.map((prod, pIdx) => (
                 <motion.div
                   key={pIdx}
+                  onClick={() => navigate("/product-details")}
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.2 }}
-                  className="bg-white rounded-xl p-2.5 sm:p-3.5 border border-rose-100/80 shadow-xs hover:shadow-lg transition flex flex-col justify-between group"
+                  className="bg-white rounded-xl p-2.5 sm:p-3.5 border border-rose-100/80 shadow-xs hover:shadow-lg transition flex flex-col justify-between group cursor-pointer"
                 >
                   <div>
                     {/* Product Image */}
                     <div className="relative h-36 sm:h-44 rounded-lg overflow-hidden bg-rose-50/50 mb-3">
-                      <button className="absolute top-2 right-2 z-10 w-7 h-7 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-rose-600 flex items-center justify-center shadow transition cursor-pointer">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevents card click when hitting the wishlist heart
+                          // Add wishlist logic here
+                        }}
+                        className="absolute top-2 right-2 z-10 w-7 h-7 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-rose-600 flex items-center justify-center shadow transition cursor-pointer"
+                      >
                         <Heart className="w-3.5 h-3.5" />
                       </button>
                       <img
@@ -213,7 +223,13 @@ export default function CatSection() {
                       {prod.price}
                     </span>
                     {/* Buy Now Button */}
-                    <button className="bg-rose-600 hover:bg-rose-700 text-white p-1.5 sm:px-3 sm:py-1.5 rounded-lg shadow transition flex items-center gap-1 text-[11px] font-medium cursor-pointer">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevents duplicate triggers
+                        navigate("/product-details");
+                      }}
+                      className="bg-rose-600 hover:bg-rose-700 text-white p-1.5 sm:px-3 sm:py-1.5 rounded-lg shadow transition flex items-center gap-1 text-[11px] font-medium cursor-pointer"
+                    >
                       <Zap className="w-3 h-3 fill-current" />
                       <span className="hidden sm:inline">Buy Now</span>
                     </button>
