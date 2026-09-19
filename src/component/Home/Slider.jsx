@@ -7,7 +7,7 @@ export default function Hero() {
     {
       title: "Lvyreli Women's Boutique",
       subtitle:
-        "Explore our vibrant resin & glossy stacking bangles handcrafted for daily.",
+        "Explore our vibrant resin & glossy stacking bangles.",
       badge: "✨ Verified Artisanal Handcrafted Bangles",
       bgGlow: "from-rose-600/40 via-pink-600/30 to-rose-900/60",
       btnText: "Shop Resin Collection",
@@ -15,7 +15,7 @@ export default function Hero() {
     {
       title: "Earthy Wooden & Boho Cuffs",
       subtitle:
-        "Sustainable, organic, and naturally unique textures for free-spirited styles.",
+        "Sustainable, organic, and naturally unique textures.",
       badge: "🌿 Sustainable Wooden & Boho Stacks",
       bgGlow: "from-amber-600/40 via-orange-600/30 to-stone-900/60",
       btnText: "Explore Boho Sets",
@@ -23,7 +23,7 @@ export default function Hero() {
     {
       title: "Traditional Lac Festive Wear",
       subtitle:
-        "Vibrant colors, mirror work, and cultural elegance for your celebrations.",
+        "Vibrant colors, mirror work, and cultural elegance.",
       badge: "💎 Traditional Lac & Bridal Sets",
       bgGlow: "from-pink-600/40 via-rose-700/30 to-purple-950/60",
       btnText: "Discover Festive Wear",
@@ -65,13 +65,13 @@ export default function Hero() {
         <div className="absolute -bottom-12 -right-12 w-64 h-64 rounded-full bg-amber-500/25 blur-3xl pointer-events-none" />
 
         {/* Solid Text Container (No backdrop blur behind text for maximum clarity) */}
-        <div className="max-w-4xl mx-auto px-6 py-4 space-y-4 z-10 relative transition-all duration-500">
+        <div className="max-w-4xl mx-auto px-6 py-4 md:space-y-4  space-y-2 z-10 relative transition-all duration-500">
           <span className="inline-flex items-center gap-1.5 bg-black/30 border border-white/20 text-white text-xs font-medium px-3.5 py-1 rounded-full shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-rose-200 animate-pulse" />
             {slides[currentIndex].badge}
           </span>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white drop-shadow-md">
+          <h1 className="text-2xl sm:text-5xl font-extrabold tracking-tight text-white drop-shadow-md">
             {slides[currentIndex].title}
           </h1>
 
@@ -80,7 +80,7 @@ export default function Hero() {
           </p>
 
           <div className="pt-2">
-            <button className="bg-white hover:bg-rose-50 text-slate-900 font-semibold px-8 py-3 rounded-full shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 mx-auto cursor-pointer">
+            <button className="bg-white hover:bg-rose-50 text-slate-900 font-semibold text-sm md:text-md md:px-8 md:py-3 px-4 py-1.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 mx-auto cursor-pointer">
               <span>{slides[currentIndex].btnText}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
