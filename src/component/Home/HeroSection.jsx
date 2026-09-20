@@ -45,7 +45,7 @@ export default function Home() {
       <Hero />
 
       <section className="max-w-7xl mx-auto px-4 -mt-20 relative z-20">
-        <div className="bg-white rounded-[2rem] shadow-xl border border-rose-100/80 px-5 py-7 md:py-4 sm:px-8 ">
+        <div className="bg-white rounded-[2rem] shadow-xl border border-rose-100/80 px-5 py-7 md:py-5 sm:px-8 ">
           {/* Header */}
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-2">
@@ -140,12 +140,12 @@ export default function Home() {
           </div>
 
           {/* Bottom decorative line */}
-          <div className="flex items-center justify-center gap-2 mt-5">
-            <span className="w-1 h-1 rounded-full bg-rose-300"></span>
-            <span className="w-12 h-px bg-rose-100"></span>
-            <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-            <span className="w-12 h-px bg-rose-100"></span>
-            <span className="w-1 h-1 rounded-full bg-rose-300"></span>
+          <div className="flex items-center justify-center gap-2 mt-3">
+            <span className="w-1 h-1 rounded-full bg-rose-400"></span>
+            <span className="w-12 h-px bg-rose-200"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+            <span className="w-12 h-px bg-rose-200"></span>
+            <span className="w-1 h-1 rounded-full bg-rose-400"></span>
           </div>
         </div>
       </section>
