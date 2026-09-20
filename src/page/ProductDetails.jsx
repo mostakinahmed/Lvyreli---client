@@ -123,7 +123,7 @@ export default function ProductDetails() {
             <img
               src={selectedImage}
               alt={product.name}
-              className="w-full h-full object-cover transition duration-500"
+              className="w-full h-full object-contain transition duration-500"
             />
           </div>
 
@@ -142,7 +142,7 @@ export default function ProductDetails() {
                 <img
                   src={img}
                   alt="Thumbnail"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </button>
             ))}
