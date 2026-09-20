@@ -25,7 +25,7 @@ export default function CatSection() {
   return (
     <div className="bg-[#FDFBF7] min-h-screen font-sans text-slate-800 pb-24">
       {/* Dynamic Category Sections mapped from categories.json */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 space-y-16 mt-12">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 space-y-16">
         {categoriesList.slice(0, 4).map((section, index) => {
           // Dynamically filter products from products.json matching each category slug
           const sectionProducts = allProducts.filter(
@@ -52,15 +52,16 @@ export default function CatSection() {
               {/* Section Header */}
               <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-rose-900/10 pb-3 gap-2">
                 <div>
-                  <span
+                  {/* <span
                     className={`inline-block text-[11px] font-semibold px-2.5 py-0.5 rounded-full border mb-1.5 ${currentAccent}`}
                   >
                     {section.count || "Featured Collection"}
-                  </span>
-                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+                  </span> */}
+                
+                  <h2 className="text-xl sm:text-4xl font-bold tracking-tight bg-gradient-to-r from-rose-400 via-fuchsia-500 to-rose-600 bg-clip-text text-transparent">
                     {section.name}
                   </h2>
-                  <p className="text-xs text-slate-500 mt-0.5">
+                  <p className="text-sm text-slate-500 mt-0.5">
                     Explore our handcrafted selection of authentic{" "}
                     {section.name.toLowerCase()}.
                   </p>

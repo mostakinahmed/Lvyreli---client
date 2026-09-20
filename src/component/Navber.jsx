@@ -22,14 +22,11 @@ export default function HomeLayout() {
     <div className="bg-slate-50 font-sans text-slate-800">
       {/* ================= HEADER ================= */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-rose-100 shadow-sm">
-        
         {/* ================= MAIN HEADER ================= */}
         <div className=" mx-auto px-4 sm:px-6 lg:px-15">
           <div className="h-16 md:h-[76px] flex items-center justify-between gap-3 md:gap-6">
-
             {/* LEFT - MOBILE MENU + LOGO */}
             <div className="flex items-center gap-3">
-              
               {/* Mobile Menu */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -80,7 +77,7 @@ export default function HomeLayout() {
                 h-11
                 items-center
                 rounded-full
-                border border-rose-200
+                border border-rose-300/80
                 bg-white
                 overflow-hidden
                 shadow-sm
@@ -116,13 +113,14 @@ export default function HomeLayout() {
                 className="
                   flex-1
                   min-w-0
+                
                   h-full
                   px-4
                   text-sm
                   text-slate-700
                   placeholder:text-slate-400
                   outline-none
-                  bg-transparent
+                  bg-white
                 "
               />
 
@@ -145,7 +143,7 @@ export default function HomeLayout() {
                   cursor-pointer
                 "
               >
-                <Camera className="hidden lg:block w-4 h-4" />
+                {/* <Camera className="hidden lg:block w-4 h-4" /> */}
                 <Search className="w-4 h-4" />
                 <span className="hidden lg:inline">Search</span>
               </button>
@@ -153,7 +151,6 @@ export default function HomeLayout() {
 
             {/* ================= RIGHT ACTIONS ================= */}
             <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
-
               {/* Country */}
               <button
                 className="
@@ -366,7 +363,6 @@ export default function HomeLayout() {
           >
             {/* Left Navigation */}
             <div className="flex items-center gap-7">
-
               {/* Categories */}
               <button
                 onClick={() => navigate("/categories")}
@@ -434,7 +430,6 @@ export default function HomeLayout() {
 
             {/* Right Navigation */}
             <div className="flex items-center gap-6 text-xs text-slate-500">
-
               <button
                 className="
                   hover:text-rose-600
@@ -516,7 +511,6 @@ export default function HomeLayout() {
 
             {/* Mobile Links */}
             <div className="mt-3 space-y-1">
-
               <button
                 className="
                   w-full
@@ -571,7 +565,6 @@ export default function HomeLayout() {
 
             {/* Bottom Links */}
             <div className="grid grid-cols-2 gap-2">
-
               <button
                 className="
                   px-3 py-2.5

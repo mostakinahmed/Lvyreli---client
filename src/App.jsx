@@ -8,9 +8,11 @@ import Footer from "./component/Footer";
 import ProductDetails from "./page/ProductDetails";
 
 function App() {
+  //bg-[#FDFBF7]
+  //prev color bg-[#FDF6F0]
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#FDF6F0] flex flex-col">
+      <div className="min-h-screen bg-[#FDFBF7] flex flex-col">
         {/* Navbar */}
         <div className="sticky top-0 z-50">
           <Navber />
