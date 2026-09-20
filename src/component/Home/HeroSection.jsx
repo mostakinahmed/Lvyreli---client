@@ -45,9 +45,9 @@ export default function Home() {
       <Hero />
 
       <section className="max-w-7xl mx-auto px-4 -mt-20 relative z-20">
-        <div className="bg-white rounded-[2rem] shadow-xl border border-rose-100/80 px-5 py-7 sm:px-8 ">
+        <div className="bg-white rounded-[2rem] shadow-xl border border-rose-100/80 px-5 py-7 md:py-4 sm:px-8 ">
           {/* Header */}
-          <div className="text-center mb-7">
+          <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-2">
               <span className="w-8 h-px bg-rose-200"></span>
 
