@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./page/Home";
+import CategoryPage from "./page/CategoryPage";
 import Navber from "./component/Navber";
 import Footer from "./component/Footer";
 import ProductDetails from "./page/ProductDetails";
@@ -23,6 +24,7 @@ function App() {
 
             {/* Pages */}
             <Route path="/product-details" element={<ProductDetails />} />
+            <Route path="/category/:categoryName" element={<CategoryPage />} />
           </Routes>
         </main>
 

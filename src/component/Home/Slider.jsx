@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <div className="bg-[#FDFBF7] font-sans text-slate-800">
       {/* ================= BACKGROUND GLOW & GLASSY ATMOSPHERE ================= */}
-      <section className="relative h-[380px] sm:h-[425px] flex items-center justify-center px-4 text-center overflow-hidden shadow-sm bg-[#1E1817]">
+      <section className="relative h-[380px] sm:h-[400px] flex items-center justify-center px-4 text-center overflow-hidden shadow-sm bg-[#1E1817]">
         {/* Dynamic Background Glow Layer */}
         <div
           className={`absolute inset-0 bg-gradient-to-br ${slides[currentIndex].bgGlow} transition-all duration-700 z-0`}

@@ -42,89 +42,115 @@ export default function Home() {
   return (
     <div className="min-h-screen font-sans text-slate-800 pb-20">
       {/* ================= HERO ================= */}
-
       <Hero />
 
-      {/* ================= CATEGORIES ================= */}
-
-      <section className="max-w-7xl mx-auto px-4 -mt-16 relative z-20">
-        <div className="bg-white rounded-2xl shadow-xl border border-rose-100 p-6 sm:p-8">
+      <section className="max-w-7xl mx-auto px-4 -mt-20 relative z-20">
+        <div className="bg-white rounded-[2rem] shadow-xl border border-rose-100/80 px-5 py-7 sm:px-8 ">
           {/* Header */}
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900">
+          <div className="text-center mb-7">
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <span className="w-8 h-px bg-rose-200"></span>
+
+              <span
+                className="text-[11px] uppercase tracking-[0.25em] 
+          text-rose-400 font-medium"
+              >
+                Discover Your Style
+              </span>
+
+              <span className="w-8 h-px bg-rose-200"></span>
+            </div>
+
+            <h2 className="text-xl sm:text-2xl font-semibold text-slate-900">
               Shop by Category
             </h2>
 
-            <div className="flex items-center gap-2">
-              <button
-                className="w-8 h-8 rounded-full border border-slate-200 
-          flex items-center justify-center text-slate-600 
-          hover:bg-rose-50 hover:border-rose-300 
-          transition cursor-pointer"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-
-              <button
-                className="w-8 h-8 rounded-full border border-slate-200 
-          flex items-center justify-center text-slate-600 
-          hover:bg-rose-50 hover:border-rose-300 
-          transition cursor-pointer"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
+       
           </div>
 
-          {/* One Row Categories */}
+          {/* Categories */}
           <div
-            className="flex justify-between overflow-x-auto pb-2 
-      scrollbar-hide scroll-smooth"
+            className="flex items-start justify-between gap-4 
+        overflow-x-auto pb-3 scrollbar-hide scroll-smooth"
           >
             {categories.map((cat) => (
               <div
                 key={cat.id}
                 onClick={() => navigate(`/category/${cat.slug}`)}
-                className="flex flex-col items-center group 
-          cursor-pointer text-center flex-shrink-0 w-24"
+                className="group cursor-pointer text-center flex-shrink-0 
+            w-[105px] sm:w-[125px]"
               >
-                {/* Category Image */}
-                <div
-                  className="w-20 h-20 sm:w-24 sm:h-24 
-            rounded-full overflow-hidden 
-            bg-rose-50 border-2 border-rose-100 
-            group-hover:border-rose-500 
-            transition duration-300 shadow-sm mb-2"
-                >
-                  <img
-                    src={cat.img}
-                    alt={cat.name}
-                    className="w-full h-full object-cover 
-              group-hover:scale-110 transition duration-500"
+                {/* Image */}
+                <div className="relative mx-auto w-[82px] h-[82px] sm:w-[96px] sm:h-[96px]">
+                  {/* Soft background ring */}
+                  <div
+                    className="absolute inset-0 rounded-full 
+                bg-gradient-to-br from-rose-50 to-pink-100
+                scale-[1.08] opacity-70
+                group-hover:scale-[1.14]
+                transition-transform duration-500"
                   />
+
+                  {/* Image */}
+                  <div
+                    className="relative w-full h-full rounded-full overflow-hidden
+                border-[3px] border-white
+                ring-1 ring-rose-100
+                shadow-md
+                group-hover:ring-rose-300
+                group-hover:shadow-lg
+                transition-all duration-300"
+                  >
+                    <img
+                      src={cat.img}
+                      alt={cat.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover
+                  group-hover:scale-110
+                  transition-transform duration-500"
+                    />
+
+                    {/* Soft overlay */}
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t
+                  from-rose-900/10 to-transparent
+                  opacity-0 group-hover:opacity-100
+                  transition-opacity duration-300"
+                    />
+                  </div>
                 </div>
 
                 {/* Category Name */}
-                <span
-                  className="text-sm font-medium text-slate-800 
-            group-hover:text-rose-600 transition 
-            line-clamp-1 w-full"
+                <h3
+                  className="mt-3 text-[13px] sm:text-sm
+              font-medium text-slate-800
+              group-hover:text-rose-600
+              transition-colors duration-300
+              line-clamp-1"
                 >
                   {cat.name}
-                </span>
+                </h3>
 
-                {/* Product Count */}
-                <span className="text-[10px] text-slate-400 mt-0.5">
+                {/* Count */}
+                <p className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5">
                   {cat.count}
-                </span>
+                </p>
               </div>
             ))}
+          </div>
+
+          {/* Bottom decorative line */}
+          <div className="flex items-center justify-center gap-2 mt-5">
+            <span className="w-1 h-1 rounded-full bg-rose-300"></span>
+            <span className="w-12 h-px bg-rose-100"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+            <span className="w-12 h-px bg-rose-100"></span>
+            <span className="w-1 h-1 rounded-full bg-rose-300"></span>
           </div>
         </div>
       </section>
 
       {/* ================= EXPERT CURATED HOT PICKS ================= */}
-
       <section className="max-w-7xl mx-auto px-4 mt-12">
         {/* Section Header */}
         <div className="mb-6">
