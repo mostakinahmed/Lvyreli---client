@@ -3,7 +3,7 @@ import { Heart, Sparkles, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2D2423] text-rose-100 font-sans border-t border-rose-900/30 py-12 px-4">
+    <footer className="bg-[#2D2423] text-rose-100 font-sans border-t border-rose-900/30 py-12 md:mt-5 mt-10 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
         {/* Brand Info */}
         <div className="space-y-2">

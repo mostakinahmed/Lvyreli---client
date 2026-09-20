@@ -55,7 +55,7 @@ export default function HomeLayout() {
                 className="flex items-center cursor-pointer"
               >
                 <img
-                  src="/logo f.png"
+                  src="https://7vgva7cju0vcfvwf.public.blob.vercel-storage.com/Lvyreli%20%282000%20x%201000%20px%29%20%281%29.png"
                   alt="Lvyreli"
                   className="
                     h-10

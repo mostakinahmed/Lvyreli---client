@@ -103,11 +103,11 @@ export default function ProductDetails() {
         </button>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 bg-white p-6 sm:p-10 rounded-2xl border border-rose-100 shadow-sm">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 bg-white  sm:p-10 rounded-2xl border border-rose-100 shadow-sm">
         {/* ================= LEFT: IMAGE GALLERY (5 Cols) ================= */}
-        <div className="lg:col-span-5 space-y-4">
+        <div className="lg:col-span-5 space-y-4 p-3">
           {/* Main Display Image */}
-          <div className="relative h-80 sm:h-[450px] rounded-2xl overflow-hidden bg-rose-50/50 border border-rose-100 shadow-inner">
+          <div className="relative p-3 h-80 sm:h-[450px] rounded-2xl overflow-hidden bg-rose-50/50 border border-rose-100 shadow-inner">
             <button
               onClick={() => setIsWishlisted(!isWishlisted)}
               className={`absolute top-4 right-4 z-10 w-10 h-10 rounded-full flex items-center justify-center shadow transition cursor-pointer ${
@@ -150,7 +150,7 @@ export default function ProductDetails() {
         </div>
 
         {/* ================= RIGHT: PRODUCT DETAILS & PURCHASE (7 Cols) ================= */}
-        <div className="lg:col-span-7 space-y-6">
+        <div className="lg:col-span-7 p-5 space-y-6">
           {/* Badge & Title */}
           <div>
             <span className="inline-block bg-rose-100 text-rose-700 text-xs font-semibold px-3 py-1 rounded-full mb-2 uppercase tracking-wide">
@@ -276,10 +276,10 @@ export default function ProductDetails() {
             <div className="p-3 bg-rose-50/40 rounded-xl border border-rose-100 flex sm:flex-col items-center sm:text-center gap-3 sm:gap-1">
               <Truck className="w-5 h-5 text-rose-600 shrink-0" />
               <div>
-                <span className="text-[11px] font-semibold text-slate-800 block">
+                <span className="text-[12px] font-semibold text-slate-800 block">
                   Safe Delivery
                 </span>
-                <span className="text-[10px] text-slate-500 block">
+                <span className="text-[11px] text-slate-500 block">
                   Bubble-wrapped securely
                 </span>
               </div>
@@ -289,10 +289,10 @@ export default function ProductDetails() {
             <div className="p-3 bg-rose-50/40 rounded-xl border border-rose-100 flex sm:flex-col items-center sm:text-center gap-3 sm:gap-1">
               <RotateCcw className="w-5 h-5 text-rose-600 shrink-0" />
               <div>
-                <span className="text-[11px] font-semibold text-slate-800 block">
+                <span className="text-[12px] font-semibold text-slate-800 block">
                   7-Day Exchange
                 </span>
-                <span className="text-[10px] text-slate-500 block">
+                <span className="text-[11px] text-slate-500 block">
                   Hassle-free sizing
                 </span>
               </div>
@@ -302,10 +302,10 @@ export default function ProductDetails() {
             <div className="p-3 bg-rose-50/40 rounded-xl border border-rose-100 flex sm:flex-col items-center sm:text-center gap-3 sm:gap-1">
               <ShieldCheck className="w-5 h-5 text-rose-600 shrink-0" />
               <div>
-                <span className="text-[11px] font-semibold text-slate-800 block">
+                <span className="text-[12px] font-semibold text-slate-800 block">
                   100% Skin Friendly
                 </span>
-                <span className="text-[10px] text-slate-500 block">
+                <span className="text-[11px] text-slate-500 block">
                   Non-allergic materials
                 </span>
               </div>
