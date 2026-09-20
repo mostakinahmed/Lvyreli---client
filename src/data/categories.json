@@ -5,49 +5,56 @@
       "name": "Resin Bangles",
       "slug": "resin",
       "count": "45 Items",
-      "img": "https://i.etsystatic.com/9897458/r/il/d10537/5362966487/il_1080xN.5362966487_qdk0.jpg"
+      "img": "https://i.etsystatic.com/9897458/r/il/d10537/5362966487/il_1080xN.5362966487_qdk0.jpg",
+      "banner": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1600&q=80"
     },
     {
       "id": 2,
       "name": "Wooden Bangles",
       "slug": "wooden",
       "count": "30 Items",
-      "img": "https://rubans.in/cdn/shop/files/RE30V411734-Model-2.jpg?v=1769684530"
+      "img": "https://rubans.in/cdn/shop/files/RE30V411734-Model-2.jpg?v=1769684530",
+      "banner": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1600&q=80"
     },
     {
       "id": 3,
       "name": "Boho Stacks",
       "slug": "boho",
       "count": "55 Items",
-      "img": "https://ae01.alicdn.com/kf/Sd356fc17c6ef4525a94e51634a7c79deq.jpg"
+      "img": "https://ae01.alicdn.com/kf/Sd356fc17c6ef4525a94e51634a7c79deq.jpg",
+      "banner": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1600&q=80"
     },
     {
       "id": 4,
       "name": "Lac Bangles",
       "slug": "lac",
       "count": "40 Items",
-      "img": "https://tajbridalstore.in/cdn/shop/files/q1svp8dryqez2ttev4d4.jpg?v=1779618541"
+      "img": "https://tajbridalstore.in/cdn/shop/files/q1svp8dryqez2ttev4d4.jpg?v=1779618541",
+      "banner": "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=1600&q=80"
     },
     {
       "id": 5,
       "name": "Bridal Sets",
       "slug": "bridal",
       "count": "25 Items",
-      "img": "https://i.pinimg.com/736x/cb/39/f9/cb39f99f89c60786972327f4214866e2.jpg"
+      "img": "https://i.pinimg.com/736x/cb/39/f9/cb39f99f89c60786972327f4214866e2.jpg",
+      "banner": "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1600&q=80"
     },
     {
       "id": 6,
       "name": "Glass Bangles",
       "slug": "glass",
       "count": "35 Items",
-      "img": "https://cdn.quicksell.co/-L5gtdTJ6M-UXZn_0cR1/products_400/-OpaYIef8K7CQw8g-yXt.jpg"
+      "img": "https://cdn.quicksell.co/-L5gtdTJ6M-UXZn_0cR1/products_400/-OpaYIef8K7CQw8g-yXt.jpg",
+      "banner": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1600&q=80"
     },
     {
       "id": 7,
       "name": "Metallic Cuffs",
       "slug": "metal",
       "count": "20 Items",
-      "img": "https://a-static.mlcdn.com.br/800x800/bracelete-grosso-largo-prata-aro-ondulado-minimalista-liso-antebraco-pulseira-rigida-feminina-curvada-aberto-ajustavel-xumi-xumi-xumi/xuvestuario/n-l03110/b4caded0670db55d3a30c8b3ee03bb58.jpeg"
+      "img": "https://a-static.mlcdn.com.br/800x800/bracelete-grosso-largo-prata-aro-ondulado-minimalista-liso-antebraco-pulseira-rigida-feminina-curvada-aberto-ajustavel-xumi-xumi-xumi/xuvestuario/n-l03110/b4caded0670db55d3a30c8b3ee03bb58.jpeg",
+      "banner": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1600&q=80"
     }
   ]
 }

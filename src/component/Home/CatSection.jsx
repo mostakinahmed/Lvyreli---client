@@ -50,31 +50,33 @@ export default function CatSection() {
               className="space-y-6"
             >
               {/* Section Header */}
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-rose-900/10 pb-3 gap-2">
-                <div>
-                  {/* <span
-                    className={`inline-block text-[11px] font-semibold px-2.5 py-0.5 rounded-full border mb-1.5 ${currentAccent}`}
-                  >
-                    {section.count || "Featured Collection"}
-                  </span> */}
-                
+              {/* Section Header */}
+              <div className="flex items-center justify-between border-b border-rose-900/10 pb-3 gap-2">
+                <div className="min-w-0">
                   <h2 className="text-xl sm:text-4xl font-bold tracking-tight bg-gradient-to-r from-rose-400 via-fuchsia-500 to-rose-600 bg-clip-text text-transparent">
                     {section.name}
                   </h2>
-                  <p className="text-sm text-slate-500 mt-0.5">
+
+                  {/* Desktop */}
+                  <p className="text-sm hidden md:block text-slate-500 mt-0.5">
                     Explore our handcrafted selection of authentic{" "}
                     {section.name.toLowerCase()}.
                   </p>
+
+                  {/* Mobile */}
+                  <p className="text-sm md:hidden text-slate-500 mt-0.5">
+                    Discover authentic {section.name.toLowerCase()}.
+                  </p>
                 </div>
+
                 <button
                   onClick={() => navigate(`/category/${section.slug}`)}
-                  className="text-xs font-semibold text-rose-600 hover:text-rose-700 flex items-center gap-1 group cursor-pointer transition self-start sm:self-auto"
+                  className="shrink-0 text-sm md:px-3 font-semibold text-rose-600 hover:text-rose-700 flex items-center gap-1 group cursor-pointer transition"
                 >
                   <span>View All</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
-
               {/* Dynamic Product Cards Grid (Limited to 2 rows / 8 items) */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
                 {limitedProducts.map((prod) => (
@@ -143,17 +145,51 @@ export default function CatSection() {
                   </motion.div>
                 ))}
               </div>
-
               {/* View All Button at the Bottom of Each Section */}
-              <div className="flex justify-center pt-2">
+              
+              <div className="flex justify-center pt-1 sm:pt-4">
                 <button
                   onClick={() => navigate(`/category/${section.slug}`)}
-                  className="bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-semibold text-xs px-6 py-2.5 rounded-xl shadow-xs transition flex items-center gap-2 cursor-pointer group"
+                  className="
+      group relative
+      inline-flex items-center gap-3
+      px-5 sm:px-6 py-1.5
+      rounded-full
+      bg-gradient-to-r from-rose-50 via-pink-50 to-fuchsia-50
+      border border-rose-200/80
+      text-rose-700
+      text-xs sm:text-sm
+      font-semibold
+      shadow-sm
+      hover:shadow-md hover:shadow-rose-100
+      hover:border-rose-300
+      hover:-translate-y-0.5
+      transition-all duration-300
+      cursor-pointer
+    "
                 >
-                  <span>View All {section.name} Collection</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <span>View All {section.name}</span>
+
+                  <span
+                    className="
+        flex items-center justify-center
+        w-7 h-7
+        rounded-full
+        bg-white
+        border border-rose-200
+        text-rose-500
+        shadow-sm
+        group-hover:bg-rose-500
+        group-hover:text-white
+        group-hover:border-rose-500
+        transition-all duration-300
+      "
+                  >
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-300" />
+                  </span>
                 </button>
               </div>
+              
             </motion.section>
           );
         })}

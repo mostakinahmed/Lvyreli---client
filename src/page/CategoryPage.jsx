@@ -29,46 +29,57 @@ export default function CategoryPage() {
   );
 
   return (
-    <div className="bg-[#FDFBF7] min-h-screen font-sans text-slate-800 pb-24 px-4 sm:px-6 pt-6">
-      {/* Breadcrumb & Back Navigation */}
-      {/* <div className="max-w-7xl mx-auto flex items-center justify-between mb-8">
-        <div className="flex items-center gap-2 text-xs text-slate-500">
-          <span
-            className="cursor-pointer hover:text-rose-600"
-            onClick={() => navigate("/")}
-          >
-            Home
-          </span>
-          <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-rose-600 font-medium capitalize">
-            {currentCategory ? currentCategory.name : categoryName} Collection
-          </span>
-        </div>
-
-        <button
-          onClick={() => navigate(-1)}
-          className="flex items-center gap-1.5 text-xs font-semibold bg-white border border-rose-200 text-slate-700 px-3 py-1.5 rounded-xl shadow-xs hover:bg-rose-50 transition cursor-pointer"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Back</span>
-        </button>
-      </div> */}
-
+    <div className="bg-[#FDFBF7] font-sans text-slate-800 pb-24 px-4 sm:px-6 pt-6">
       {/* Category Header Banner */}
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-rose-700 via-rose-600 to-pink-700 text-white rounded-3xl p-8 sm:p-12 mb-10 shadow-md relative overflow-hidden">
-        <div className="max-w-2xl space-y-3 z-10 relative">
-          <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-md border border-white/20">
-            {categoryProducts.length} Artisan Items Available
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold capitalize tracking-tight">
-            {currentCategory
-              ? currentCategory.name
-              : `${categoryName} Collection`}
-          </h1>
-          <p className="text-sm text-rose-100 font-light leading-relaxed">
-            Discover our handpicked collection of premium handcrafted{" "}
-            {categoryName} bangles and cuffs designed for absolute elegance.
-          </p>
+
+      <div className="max-w-7xl mx-auto mb-12">
+        <div className="relative overflow-hidden rounded-3xl min-h-[280px] bg-rose-900 shadow-xl border border-rose-200">
+          {/* Real Crisp Banner Image without any blur or gradient */}
+          <img
+            src={currentCategory?.banner}
+            alt={currentCategory?.name || `${categoryName} Collection`}
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+
+          {/* Content Container with High Visibility Text (Bold, Big Size, Strong Shadows) */}
+          <div className="relative z-10 min-h-[280px] flex items-center justify-between p-6 sm:p-12">
+            <div className="max-w-2xl space-y-4">
+              {/* Category Pill Badge */}
+              <span className="inline-flex items-center gap-2 bg-rose-600 text-white text-xs sm:text-sm font-extrabold tracking-wider px-4 py-2 rounded-full shadow-lg border-2 border-white">
+                <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" />
+                {categoryProducts.length} Artisan Items Curated
+              </span>
+
+              {/* Title: Extra Bold, Big Size, Deep Text Shadow */}
+              <h1 className="text-4xl sm:text-6xl font-black capitalize tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
+                {currentCategory
+                  ? currentCategory.name
+                  : `${categoryName} Collection`}
+              </h1>
+
+             
+
+              {/* Minimalist Divider */}
+              <div className="flex items-center gap-3 pt-2">
+                <span className="text-xs text-white font-extrabold uppercase tracking-widest drop-shadow">
+                  Lvyreli Signature
+                </span>
+                <span className="w-12 h-0.5 bg-white shadow" />
+                <span className="w-2 h-2 rounded-full bg-white" />
+              </div>
+            </div>
+
+            {/* Floating Preview Badge (Visible on Desktop) */}
+            <div className="hidden lg:flex flex-col items-center justify-center p-6 bg-rose-950/95 rounded-2xl border-2 border-white text-white shadow-2xl min-w-[170px]">
+              <span className="text-[11px] uppercase tracking-widest text-rose-200 font-black mb-1">
+                Authenticity
+              </span>
+              <span className="text-2xl font-black text-white">100%</span>
+              <span className="text-xs text-rose-100 font-bold text-center mt-0.5">
+                Handcrafted Quality
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
