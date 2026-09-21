@@ -259,10 +259,14 @@ export default function ProductDetails() {
 
             {/* CTA Buttons */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <button className="bg-rose-600 hover:bg-rose-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer">
-                <Zap className="w-4 h-4 fill-current" />
-                <span>Buy Now</span>
-              </button>
+           <button 
+  onClick={() => navigate(`/checkout/${product.id || 'default-prod'}`)}
+  className="bg-rose-600 hover:bg-rose-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer"
+>
+  <Zap className="w-4 h-4 fill-current" />
+  <span>Buy Now</span>
+</button>
+
               <button className="bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-semibold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 cursor-pointer">
                 <ShoppingBag className="w-4 h-4" />
                 <span>Add to Cart</span>
