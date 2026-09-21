@@ -85,7 +85,7 @@ export default function CatSection() {
                     onClick={() => navigate(`/product-details/${prod.id}`)}
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.2 }}
-                    className="bg-white rounded-xl p-2.5 sm:p-3.5 border border-rose-100/80 shadow-xs hover:shadow-lg transition flex flex-col justify-between group cursor-pointer"
+                    className="bg-white rounded p-2.5 sm:p-3.5 border border-rose-100/90 shadow-xs hover:shadow-lg transition flex flex-col justify-between group cursor-pointer"
                   >
                     <div>
                       {/* Product Image */}
@@ -101,7 +101,7 @@ export default function CatSection() {
                         <img
                           src={prod.img}
                           alt={prod.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                          className="w-full h-full object-cover"
                         />
                       </div>
 
